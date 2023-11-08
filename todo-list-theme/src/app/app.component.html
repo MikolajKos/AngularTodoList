@@ -40,96 +40,8 @@
   <div class="container">
     <div class="row">
       <div class="col-12 mb-4 fs-2 fw-light">My Tasks</div>
-      <div class="col-12 mb-2">
-
-      </div>
       <div class="col-9 shadow p-3 rounded mb-3">
-        <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Priority</th>
-                <th scope="col">Category</th>
-                <th scope="col">Task</th>
-                <th scope="col">Operations</th>
-              </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th class="p-3" scope="row">
-                        <input type="checkbox" class="form-check-input">
-                    </th>
-                    <td class="p-3">Mark</td>
-                    <td class="p-3">Otto</td>
-                    <td class="p-3">@mdo</td>
-                    <td class=" w-25">
-                        <button type="button" class="btn btn-outline-success me-2">Done</button>
-                        <button type="button" class="btn btn-outline-danger">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th class="p-3" scope="row">
-                        <input type="checkbox" class="form-check-input">
-                    </th>
-                    <td class="p-3">Mark</td>
-                    <td class="p-3">Otto</td>
-                    <td class="p-3">@mdo</td>
-                    <td class=" w-25">
-                        <button type="button" class="btn btn-outline-success me-2">Done</button>
-                        <button type="button" class="btn btn-outline-danger">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th class="p-3" scope="row">
-                        <input type="checkbox" class="form-check-input">
-                    </th>
-                    <td class="p-3">Mark</td>
-                    <td class="p-3">Otto</td>
-                    <td class="p-3">@mdo</td>
-                    <td class=" w-25">
-                        <button type="button" class="btn btn-outline-success me-2">Done</button>
-                        <button type="button" class="btn btn-outline-danger">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th class="p-3" scope="row">
-                        <input type="checkbox" class="form-check-input">
-                    </th>
-                    <td class="p-3">Mark</td>
-                    <td class="p-3">Otto</td>
-                    <td class="p-3">@mdo</td>
-                    <td class=" w-25">
-                        <button type="button" class="btn btn-outline-success me-2">Done</button>
-                        <button type="button" class="btn btn-outline-danger">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th class="p-3" scope="row">
-                        <input type="checkbox" class="form-check-input">
-                    </th>
-                    <td class="p-3">Mark</td>
-                    <td class="p-3">Otto</td>
-                    <td class="p-3">@mdo</td>
-                    <td class=" w-25">
-                        <button type="button" class="btn btn-outline-success me-2">Done</button>
-                        <button type="button" class="btn btn-outline-danger">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th class="p-3" scope="row">
-                        <input type="checkbox" class="form-check-input">
-                    </th>
-                    <td class="p-3">Mark</td>
-                    <td class="p-3">Otto</td>
-                    <td class="p-3">@mdo</td>
-                    <td class=" w-25">
-                        <button type="button" class="btn btn-outline-success me-2">Done</button>
-                        <button type="button" class="btn btn-outline-danger">Delete</button>
-                    </td>
-                </tr>
-                  
-            </tbody>
-          </table>
+        <app-todo-task></app-todo-task>
       </div>
       <div class="col-3">
         <div class="container">
@@ -159,13 +71,13 @@
                 <span class="fs-5">Find Task</span><br><br>
                 <form>
                     <div class="mb-3">
-                      <label for="exampleInputEmail1" class="form-label">Task title</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <label class="form-label">Task title</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1">
                       <div id="emailHelp" class="form-text">Enter your task.</div>
                     </div>
 
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Task category</label>
+                        <label class="form-label">Task category</label>
                         <select class="form-select" aria-label="Default select example">
                             <option value="1">Family</option>
                             <option value="2">Work</option>
@@ -173,13 +85,17 @@
                         </select>
                     </div>
 
-                    <div class="mb-5">
-                        <label for="exampleInputEmail1" class="form-label">Task priority</label>
+                    <div class="mb-3">
+                        <label class="form-label">Task priority</label>
                         <select class="form-select" aria-label="Default select example">
                             <option value="1">Very Important</option>
                             <option value="2">Important</option>
                             <option value="3">Not Important</option>
                         </select>
+                    </div>
+
+                    <div>
+                      <button class="btn btn-outline-primary w-100">Find Task</button>
                     </div>
                   </form>
             </div>
@@ -243,43 +159,7 @@
               </h2>
               <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
                 <div class="accordion-body">
-                    <button type="button" class="btn btn-outline-danger w-100 mb-3">Clear All</button>
-                    <table class="table">
-                        <thead>
-                          <tr>
-                            <th scope="col">Priority</th>
-                            <th scope="col">Category</th>
-                            <th scope="col">Task</th>
-                            <th scope="col">Operations</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="p-3">Mark</td>
-                                <td class="p-3">Otto</td>
-                                <td class="p-3">@mdo</td>
-                                <td class=" w-25">
-                                    <button type="button" class="btn btn-outline-warning">Undo</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="p-3">Mark</td>
-                                <td class="p-3">Otto</td>
-                                <td class="p-3">@mdo</td>
-                                <td class=" w-25">
-                                    <button type="button" class="btn btn-outline-warning">Undo</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="p-3">Mark</td>
-                                <td class="p-3">Otto</td>
-                                <td class="p-3">@mdo</td>
-                                <td class=" w-25">
-                                    <button type="button" class="btn btn-outline-warning">Undo</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                      </table>
+                    <app-deleted-task></app-deleted-task>
                 </div>
               </div>
             </div>
